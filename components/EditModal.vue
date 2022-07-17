@@ -309,10 +309,37 @@ export default {
           "dueDate": this.form.dueDate,
           "name": this.form.name,
           "amount": this.form.amount,
-          "status": 'Draft'
+          "status": this.form.status,
+          "terms": '30',
+          "projectDesc": 'Graphic Designer',
+          "itemList": [{
+            "itemName": "Banner Design",
+            "qty": 1,
+            "price": "156.00",
+            "total": "156.00"
+          },{
+            "itemName": "Email Design",
+            "qty": 2,
+            "price": "200.00",
+            "total": "400.00"
+          }],
+          "billFrom": {
+            "streetAddress": "19 Union Terrace",
+            "city": "London",
+            "postCode": "E1 3EZ",
+            "country": "United Kingdom",
+          },
+          "billTo": {
+            "email": "alexgrim@mail.com",
+            "streetAddress": "84 Cruch Way",
+            "city": "BradFord",
+            "postCode": "BD1 9PB",
+            "country": "United Kingdom",
+          }
         }
       )
       this.$emit('close-modal')
+      this.$nuxt.refresh()
     }
   }
 }

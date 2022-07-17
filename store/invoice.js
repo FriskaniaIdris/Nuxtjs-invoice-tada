@@ -274,7 +274,7 @@ export const mutations = {
     localStorage.setItem('invoiceData', JSON.stringify(state.invoiceData))
   },
   editInvoice(state, invoiceData){
-    state.invoiceData[data.index] = invoiceData
+    state.invoiceData[state.invoiceData.findIndex(invoice => invoiceData.invoiceNumber == invoice.invoiceNumber)] = invoiceData
     localStorage.removeItem('invoiceData')
     localStorage.setItem('invoiceData', JSON.stringify(state.invoiceData))
   },
