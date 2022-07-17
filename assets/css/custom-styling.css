@@ -1,0 +1,103 @@
+.slide-left-right-enter-active {
+  transition: all 0.5s linear;
+}
+
+.slide-left-right-leave-active {
+  transition: all 0.5s linear;
+}
+
+.slide-left-right-enter, .slide-left-right-leave-to {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
+.slide-top-bottom-enter-active {
+  transition: all 0.5s linear;
+}
+
+.slide-top-bottom-leave-active {
+  transition: all 0.5s linear;
+}
+
+.slide-top-bottom-enter, .slide-top-bottom-leave-to {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.circle {
+  height: 15px;
+  width: 30px;
+  border-radius: 0 0 15px 15px;
+  background-color: white;
+  position: absolute;
+  z-index: 100;
+  top: 27px;
+  left: 10px;
+  margin-bottom: auto;
+}
+.circle:nth-child(1) {
+  transform: rotate(70deg);
+}
+.circle:nth-child(2) {
+  transform: rotate(-70deg);
+  margin-left: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .circle {
+    height: 20px;
+    width: 40px;
+    border-radius: 0 0 20px 20px;
+    top: 40px;
+    left: 15px;
+  }
+  .circle:nth-child(2) {
+    margin-left: 20px;
+  }
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+.form-area {
+  height: calc(100vh - 16rem);
+  padding-right: 1rem;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.form-area::-webkit-scrollbar {
+  width: 10px;
+}
+.form-area::-webkit-scrollbar-track {
+  background: #f1f1f10d;
+  border-radius: 10px;
+}
+.form-area::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.form-area::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  transition: all 0.3s linear;
+}
+
+@media screen and (min-width: 768px) {
+  .form-area {
+    height: calc(100vh - 13rem);
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/*# sourceMappingURL=custom-styling.css.map */
